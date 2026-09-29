@@ -1,2 +1,0 @@
-# student-attendance-
-Attendance management 
