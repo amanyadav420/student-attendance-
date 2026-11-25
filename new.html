@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance App</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>📚 Student Attendance</h1>
+            <p>Manage your students and track daily attendance</p>
+        </header>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <span id="totalStudents">0</span>
+            </div>
+
+            <div class="card present-card">
+                <h3>Present</h3>
+                <span id="presentCount">0</span>
+            </div>
+
+            <div class="card absent-card">
+                <h3>Absent</h3>
+                <span id="absentCount">0</span>
+            </div>
+
+            <div class="card percentage-card">
+                <h3>Attendance</h3>
+                <span id="attendancePercentage">0%</span>
+            </div>
+
+        </section>
+
+        <!-- Controls -->
+        <section class="controls">
+
+            <div>
+                <label for="date">Attendance Date</label>
+                <input type="date" id="date">
+            </div>
+
+            <div>
+                <label for="search">Search Student</label>
+                <input 
+                    type="text" 
+                    id="search" 
+                    placeholder="Search by name..."
+                >
+            </div>
+
+            <button id="addStudentBtn" class="primary-btn">
+                + Add Student
+            </button>
+
+        </section>
+
+        <!-- Add Student Form -->
+        <section id="studentForm" class="form-box hidden">
+
+            <h2>Add New Student</h2>
+
+            <input 
+                type="text" 
+                id="studentName" 
+                placeholder="Student name"
+            >
+
+            <input 
+                type="text" 
+                id="studentRoll" 
+                placeholder="Roll number"
+            >
+
+            <button id="saveStudentBtn" class="primary-btn">
+                Save Student
+            </button>
+
+            <button id="cancelBtn" class="secondary-btn">
+                Cancel
+            </button>
+
+        </section>
+
+        <!-- Attendance Table -->
+        <section class="attendance-section">
+
+            <h2>Today's Attendance</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Roll No.</th>
+                            <th>Student Name</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div id="emptyMessage" class="empty">
+                No students found. Add a student to get started.
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="new.js"></script>
+
+</body>
+</html>
